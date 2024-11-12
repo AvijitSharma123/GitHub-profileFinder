@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: #FFF; */
 }
 
 .main{
@@ -11,6 +12,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: hsl(0, 100%, 100%);
+}
+
+.firstDiv{
+    margin: 20px;
 }
 
 .secondDiv{
@@ -35,7 +41,7 @@
 }
 .userImg{
     border-radius: 50%;
-    width: 100%;
+    width: 60%;
 }
 .userDetail{
     font-size: 25px;
@@ -100,11 +106,70 @@
     border-bottom-color: #FF3D00;
   }
   
-  @keyframes rotation {
+  /* @keyframes rotation {
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(360deg);
     }
-  } 
+  }   */
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .secondDiv {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .firstDiv h1 {
+        font-size: 1.8em;
+    }
+
+    .VisitProfile {
+        font-size: 1.3rem;
+        width: 90%;
+    }
+
+    .userDetail {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 10px;
+    }
+
+    .firstDiv h1 {
+        font-size: 1.5em;
+    }
+
+    .secondDiv {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .userImg {
+        width: 60%;
+    }
+
+    .userDetail {
+        font-size: 1em;
+    }
+
+    .userName {
+        font-size: 1.5em;
+    }
+
+    .VisitProfile {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .repo {
+        font-size: 1em;
+    }
+}

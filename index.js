@@ -4,12 +4,14 @@ async function fetchUser(username) {
     let response = await fetch(`https://api.github.com/users/${username}`);
     let result = await response.json();
     displayUser(result);
+    
 }
 
 document.getElementById("btn").addEventListener("click", () => {
     document.getElementById("userProfile").innerHTML = `<span class="loader"></span>`
     let userId = user.value;
     fetchUser(userId);
+    user.value='';
 });
 
 function displayUser({
